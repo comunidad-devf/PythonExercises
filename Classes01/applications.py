@@ -58,9 +58,9 @@ else:
     new.belt = 'black'
 
 
-data = new.to_JSON()
+data = new.__dict__
 
-print(data)
+print(new.to_JSON())
 with open('{}.json'.format(new.name), 'w') as f:
     json.dump(data, f)
 
